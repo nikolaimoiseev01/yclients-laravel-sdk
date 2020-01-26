@@ -63,7 +63,7 @@ trait Paginated
         if (!is_array($this->pages)) {
             $this->pages = [$this->pages];
         }
-        $this->params['count'] = $this->countOnPage;
+        $this->params['count'] = $this->params['count'] ?? $this->countOnPage;
 
         $result = [];
         $result['count'] = null;
