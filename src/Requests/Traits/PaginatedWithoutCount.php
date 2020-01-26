@@ -76,7 +76,6 @@ trait PaginatedWithoutCount
             $this->pages = [$this->pages];
         }
         $this->params['count'] = $this->countOnPage;
-        //dd($this->countOnPage);
 
         $result = [];
         $result['data'] = [];
