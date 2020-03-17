@@ -80,6 +80,9 @@ trait Paginated
             }
 
             $result['data'][] = $data;
+
+            $sleep = rand(config('yclients-laravel-sdk.delay.min', 0), config('yclients-laravel-sdk.delay.min', 1));
+            sleep($sleep);
         }
 
         $result['data'] = collect($result['data'])->collapse()->all();

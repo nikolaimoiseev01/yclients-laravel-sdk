@@ -85,6 +85,9 @@ trait PaginatedWithoutCount
             $tmp = $this->requestApi($url, $method, $auth);
 
             $result['data'][] = $tmp;
+
+            $sleep = rand(config('yclients-laravel-sdk.delay.min', 0), config('yclients-laravel-sdk.delay.min', 1));
+            sleep($sleep);
         }
 
         $result['data'] = collect($result['data'])->collapse()->all();

@@ -133,3 +133,8 @@ $visitDetails = YClientsSDK::visitDetails()->setVisitId($visitId)->setSalonId($s
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+
+## Package updates
+
+https://packagist.org/packages/googlogmob/yclients-laravel-sdk
