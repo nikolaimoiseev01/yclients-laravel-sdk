@@ -73,7 +73,7 @@ abstract class Request
 
         return new Client([
             'base_uri' => $this->host,
-            'timeout'  => 10,
+            'timeout'  => config('yclients-laravel-sdk.request.timeout'),
             'headers'  => [
                 'Authorization' => $authorization,
             ],

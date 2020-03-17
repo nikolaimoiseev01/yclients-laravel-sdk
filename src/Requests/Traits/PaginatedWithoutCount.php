@@ -86,7 +86,7 @@ trait PaginatedWithoutCount
 
             $result['data'][] = $tmp;
 
-            $sleep = rand(config('yclients-laravel-sdk.delay.min', 0), config('yclients-laravel-sdk.delay.min', 1));
+            $sleep = rand(config('yclients-laravel-sdk.request.delay.min', 0), config('yclients-laravel-sdk.request.delay.min', 1));
             sleep($sleep);
         }
 

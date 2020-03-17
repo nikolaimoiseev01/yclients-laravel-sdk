@@ -14,9 +14,12 @@ return [
 
     ],
 
-    'delay' => [
-        'min' => 1,
-        'max' => 3,
+    'request' => [
+        'delay' => [
+            'min' => 1,
+            'max' => 3,
+        ],
+        'timeout' => 15,
     ],
 
 ];
