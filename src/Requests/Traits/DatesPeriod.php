@@ -29,4 +29,15 @@ trait DatesPeriod
 
         return $this;
     }
+
+    /**
+     * @param Carbon $changedAfter
+     * @return $this
+     */
+    public function setChangedAfter(Carbon $changedAfter)
+    {
+        $this->params['changed_after'] = $changedAfter->toDateString();
+
+        return $this;
+    }
 }
