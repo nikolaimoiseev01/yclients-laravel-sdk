@@ -3,11 +3,14 @@
 namespace googlogmob\YClientsSDK\Requests;
 
 use googlogmob\YClientsSDK\Requests\Traits\Company;
+use googlogmob\YClientsSDK\Requests\Traits\DatesPeriod;
 use googlogmob\YClientsSDK\Requests\Traits\PaginatedWithoutCount;
 
 class Goods extends Request
 {
-    use Company, PaginatedWithoutCount;
+    use Company,
+        DatesPeriod,
+        PaginatedWithoutCount;
 
     protected $goodId;
 
