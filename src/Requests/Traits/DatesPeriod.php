@@ -36,7 +36,7 @@ trait DatesPeriod
      */
     public function setChangedAfter(Carbon $changedAfter)
     {
-        $this->params['changed_after'] = $changedAfter->toDateString();
+        $this->params['changed_after'] = $changedAfter->toDateTimeLocalString();
 
         return $this;
     }
