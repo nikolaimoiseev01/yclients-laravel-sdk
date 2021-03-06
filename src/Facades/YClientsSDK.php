@@ -2,6 +2,7 @@
 
 namespace googlogmob\YClientsSDK\Facades;
 
+use googlogmob\YClientsSDK\Requests\GoodsCategories;
 use Illuminate\Support\Facades\Facade;
 use googlogmob\YClientsSDK\Requests\Authorization;
 use googlogmob\YClientsSDK\Requests\Clients;
@@ -33,6 +34,7 @@ use googlogmob\YClientsSDK\Requests\ZReport;
  * @method static ServiceCategory serviceCategory
  * @method static Records records
  * @method static Goods goods
+ * @method static GoodsCategories goodsCategories
  * @method static Clients clients
  * @method static Visits visits
  * @method static VisitDetails visitDetails
