@@ -7,6 +7,7 @@ use googlogmob\YClientsSDK\Requests\Clients;
 use googlogmob\YClientsSDK\Requests\Companies;
 use googlogmob\YClientsSDK\Requests\Documents;
 use googlogmob\YClientsSDK\Requests\Goods;
+use googlogmob\YClientsSDK\Requests\GoodsCategories;
 use googlogmob\YClientsSDK\Requests\GoodsTransactions\TransactionsSearch;
 use googlogmob\YClientsSDK\Requests\Groups;
 use googlogmob\YClientsSDK\Requests\Records;
@@ -27,7 +28,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return Authorization
      */
-    public function authorization()
+    public function authorization(): Authorization
     {
         return new Authorization();
     }
@@ -35,7 +36,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return Companies
      */
-    public function companies()
+    public function companies(): Companies
     {
         return new Companies();
     }
@@ -43,7 +44,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return Services
      */
-    public function services()
+    public function services(): Services
     {
         return new Services();
     }
@@ -51,7 +52,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return Staff
      */
-    public function staff()
+    public function staff(): Staff
     {
         return new Staff();
     }
@@ -59,7 +60,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return ServiceCategory
      */
-    public function serviceCategory()
+    public function serviceCategory(): ServiceCategory
     {
         return new ServiceCategory();
     }
@@ -67,7 +68,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return Records
      */
-    public function records()
+    public function records(): Records
     {
         return new Records();
     }
@@ -75,15 +76,23 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return Goods
      */
-    public function goods()
+    public function goods(): Goods
     {
         return new Goods();
     }
 
     /**
+     * @return GoodsCategories
+     */
+    public function goodsCategories(): GoodsCategories
+    {
+        return new GoodsCategories();
+    }
+
+    /**
      * @return Clients
      */
-    public function clients()
+    public function clients(): Clients
     {
         return new Clients();
     }
@@ -91,7 +100,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return Visits
      */
-    public function visits()
+    public function visits(): Visits
     {
         return new Visits();
     }
@@ -99,7 +108,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return VisitDetails
      */
-    public function visitDetails()
+    public function visitDetails(): VisitDetails
     {
         return new VisitDetails();
     }
@@ -107,7 +116,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return Groups
      */
-    public function groups()
+    public function groups(): Groups
     {
         return new Groups();
     }
@@ -115,7 +124,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return TransactionsByFilter
      */
-    public function transactionsByFilter()
+    public function transactionsByFilter(): TransactionsByFilter
     {
         return new TransactionsByFilter();
     }
@@ -123,7 +132,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return TransactionsSearch
      */
-    public function goodsTransactionsSearch()
+    public function goodsTransactionsSearch(): TransactionsSearch
     {
         return new TransactionsSearch();
     }
@@ -131,7 +140,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return Documents
      */
-    public function documents()
+    public function documents(): Documents
     {
         return new Documents();
     }
@@ -139,7 +148,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return Seances
      */
-    public function seances()
+    public function seances(): Seances
     {
         return new Seances();
     }
@@ -147,7 +156,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return Schedules
      */
-    public function schedules()
+    public function schedules(): Schedules
     {
         return new Schedules();
     }
@@ -155,7 +164,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return ZReport
      */
-    public function zReport()
+    public function zReport(): ZReport
     {
         return new ZReport();
     }
@@ -163,7 +172,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return Storages
      */
-    public function storages()
+    public function storages(): Storages
     {
         return new Storages();
     }
@@ -171,7 +180,7 @@ class YClientsSDK extends AbstractYClientsSDK
     /**
      * @return Users
      */
-    public function users()
+    public function users(): Users
     {
         return new Users();
     }
