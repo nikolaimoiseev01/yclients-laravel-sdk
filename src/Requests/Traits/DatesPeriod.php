@@ -40,4 +40,11 @@ trait DatesPeriod
 
         return $this;
     }
+
+    public function setCreaetedBefore(Carbon $createdBefore)
+    {
+        $this->params['created_before'] = $createdBefore->toDateTimeLocalString();
+
+        return $this;
+    }
 }
