@@ -2,6 +2,7 @@
 
 namespace googlogmob\YClientsSDK\Facades;
 
+use googlogmob\YClientsSDK\Requests\Abonements;
 use googlogmob\YClientsSDK\Requests\GoodsCategories;
 use Illuminate\Support\Facades\Facade;
 use googlogmob\YClientsSDK\Requests\Authorization;
@@ -47,6 +48,7 @@ use googlogmob\YClientsSDK\Requests\ZReport;
  * @method static ZReport zReport
  * @method static Storages storages
  * @method static Users users
+ * @method static Abonements abonements
  */
 class YClientsSDK extends Facade
 {

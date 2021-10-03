@@ -2,6 +2,7 @@
 
 namespace googlogmob\YClientsSDK;
 
+use googlogmob\YClientsSDK\Requests\Abonements;
 use googlogmob\YClientsSDK\Requests\Authorization;
 use googlogmob\YClientsSDK\Requests\Clients;
 use googlogmob\YClientsSDK\Requests\Companies;
@@ -183,5 +184,13 @@ class YClientsSDK extends AbstractYClientsSDK
     public function users(): Users
     {
         return new Users();
+    }
+
+    /**
+     * @return Abonements
+     */
+    public function abonements(): Abonements
+    {
+        return new Abonements();
     }
 }
