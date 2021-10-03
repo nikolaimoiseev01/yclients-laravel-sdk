@@ -36,14 +36,14 @@ trait DatesPeriod
      */
     public function setChangedAfter(Carbon $changedAfter)
     {
-        $this->params['changed_after'] = $changedAfter->toDateTimeLocalString();
+        $this->params['changed_after'] = $changedAfter->toDateString();
 
         return $this;
     }
 
     public function setCreatedBefore(Carbon $createdBefore)
     {
-        $this->params['created_before'] = $createdBefore->toDateTimeLocalString();
+        $this->params['created_before'] = $createdBefore->toDateString();
 
         return $this;
     }
