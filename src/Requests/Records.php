@@ -2,37 +2,18 @@
 
 namespace googlogmob\YClientsSDK\Requests;
 
-use Carbon\Carbon;
+use googlogmob\YClientsSDK\Requests\Filters\RecordsFilter;
 use googlogmob\YClientsSDK\Requests\Traits\Company;
 use googlogmob\YClientsSDK\Requests\Traits\Paginated;
+use Illuminate\Support\Collection;
 
 class Records extends Request
 {
-    use Company, Paginated;
+    use Company,
+        Paginated,
+        RecordsFilter;
 
-    /**
-     * @var Carbon
-     */
-    protected $changedAfter;
-
-    public function setChangedAfter(Carbon $changedAfter)
-    {
-        $this->params['changed_after'] = $changedAfter->format('Y-m-d\TH:i:s');
-
-        return $this;
-    }
-
-    /**
-     * @return $this
-     */
-    public function includeFinanceTransactions()
-    {
-        $this->params['include_finance_transactions'] = 1;
-
-        return $this;
-    }
-
-    protected function request()
+    protected function request(): Collection
     {
         return $this->paginateRequest("records/{$this->company_id}");
     }

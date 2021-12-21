@@ -4,59 +4,40 @@ namespace googlogmob\YClientsSDK\Requests\Traits;
 
 use Carbon\Carbon;
 
+/**
+ * @property array $params
+ */
 trait DatesPeriod
 {
-    /**
-     * @param Carbon $startDate
-     *
-     * @return $this
-     */
-    public function setStartDate(Carbon $startDate)
+    public function setStartDate(Carbon $startDate): self
     {
         $this->params['start_date'] = $startDate->toDateString();
 
         return $this;
     }
 
-    /**
-     * @param Carbon $endDate
-     *
-     * @return $this
-     */
-    public function setEndDate(Carbon $endDate)
+    public function setEndDate(Carbon $endDate): self
     {
         $this->params['end_date'] = $endDate->toDateString();
 
         return $this;
     }
 
-    /**
-     * @param Carbon $changedAfter
-     * @return $this
-     */
-    public function setChangedAfter(Carbon $changedAfter)
+    public function setChangedAfter(Carbon $changedAfter): self
     {
         $this->params['changed_after'] = $changedAfter->toDateTimeLocalString();
 
         return $this;
     }
 
-    /**
-     * @param Carbon $createdAfter
-     * @return $this
-     */
-    public function setCreatedAfter(Carbon $createdAfter)
+    public function setCreatedAfter(Carbon $createdAfter): self
     {
         $this->params['created_after'] = $createdAfter->toDateString();
 
         return $this;
     }
 
-    /**
-     * @param Carbon $createdBefore
-     * @return $this
-     */
-    public function setCreatedBefore(Carbon $createdBefore)
+    public function setCreatedBefore(Carbon $createdBefore): self
     {
         $this->params['created_before'] = $createdBefore->toDateString();
 
