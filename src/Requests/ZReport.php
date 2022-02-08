@@ -3,17 +3,22 @@
 namespace googlogmob\YClientsSDK\Requests;
 
 use googlogmob\YClientsSDK\Requests\Traits\Company;
+use googlogmob\YClientsSDK\Requests\Traits\DatesPeriod;
+use googlogmob\YClientsSDK\Requests\Traits\Master;
+use Illuminate\Support\Collection;
 
 class ZReport extends Request
 {
-    use Company;
+    use Company,
+        DatesPeriod,
+        Master;
+
 
     /**
+     * @return Collection
      * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @return \Illuminate\Support\Collection
      */
-    protected function request()
+    protected function request(): Collection
     {
         return $this->requestApi("reports/z_report/{$this->company_id}");
     }
