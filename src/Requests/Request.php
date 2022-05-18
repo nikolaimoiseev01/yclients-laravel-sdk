@@ -9,6 +9,9 @@ use googlogmob\YClientsSDK\Exceptions\RequestException;
 abstract class Request
 {
     private $host = 'https://api.yclients.com/api/v1/';
+    private $altegioHost = 'https://api.alteg.io/api/v1/';
+
+    private $useAltegio = false;
 
     private $account = 'default';
     // Auth
@@ -54,6 +57,10 @@ abstract class Request
         if (!is_string($account) && !is_array($account)) {
             throw new \Exception('Argument account must be string or array');
         }
+
+        $this->useAltegio = $account['altegio'] ?? false;
+        unset($account['altegio']);
+
         $this->account = $account;
 
         return $this;
@@ -72,7 +79,7 @@ abstract class Request
         }
 
         return new Client([
-            'base_uri' => $this->host,
+            'base_uri' => $this->useAltegio ? $this->altegioHost : $this->host,
             'timeout'  => config('yclients-laravel-sdk.request.timeout'),
             'headers'  => [
                 'Authorization' => $authorization,
