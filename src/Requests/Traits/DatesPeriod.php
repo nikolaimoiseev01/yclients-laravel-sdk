@@ -30,6 +30,13 @@ trait DatesPeriod
         return $this;
     }
 
+    public function setChangedBefore(Carbon $changedBefore): self
+    {
+        $this->params['changed_before'] = $changedBefore->toDateTimeLocalString();
+
+        return $this;
+    }
+
     public function setCreatedAfter(Carbon $createdAfter): self
     {
         $this->params['created_after'] = $createdAfter->toDateString();
