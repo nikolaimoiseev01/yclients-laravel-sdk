@@ -14,6 +14,8 @@ use googlogmob\YClientsSDK\Requests\GoodsTransactions\TransactionsSearch;
 use googlogmob\YClientsSDK\Requests\Groups;
 use googlogmob\YClientsSDK\Requests\Programs;
 use googlogmob\YClientsSDK\Requests\Records;
+use googlogmob\YClientsSDK\Requests\SalaryCalculation;
+use googlogmob\YClientsSDK\Requests\SalaryPeriod;
 use googlogmob\YClientsSDK\Requests\Schedules;
 use googlogmob\YClientsSDK\Requests\Seances;
 use googlogmob\YClientsSDK\Requests\ServiceCategory;
@@ -210,5 +212,15 @@ class YClientsSDK extends AbstractYClientsSDK
     public function programs(): Programs
     {
         return new Programs();
+    }
+
+    public function salaryCalculation(): SalaryCalculation
+    {
+        return new SalaryCalculation();
+    }
+
+    public function salaryPeriod(): SalaryPeriod
+    {
+        return new SalaryPeriod();
     }
 }

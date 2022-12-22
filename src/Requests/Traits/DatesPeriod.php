@@ -50,4 +50,18 @@ trait DatesPeriod
 
         return $this;
     }
+
+    public function setDateFrom(Carbon $dateFrom): self
+    {
+        $this->params['date_from'] = $dateFrom->toDateString();
+
+        return $this;
+    }
+
+    public function setDateTo(Carbon $dateTo): self
+    {
+        $this->params['date_to'] = $dateTo->toDateString();
+
+        return $this;
+    }
 }
