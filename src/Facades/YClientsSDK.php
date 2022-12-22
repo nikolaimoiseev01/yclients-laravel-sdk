@@ -6,8 +6,8 @@ use googlogmob\YClientsSDK\Requests\Abonements;
 use googlogmob\YClientsSDK\Requests\AbonementsTransactions;
 use googlogmob\YClientsSDK\Requests\GoodsCategories;
 use googlogmob\YClientsSDK\Requests\Programs;
-use googlogmob\YClientsSDK\Requests\SalaryCalculation;
-use googlogmob\YClientsSDK\Requests\SalaryPeriod;
+use googlogmob\YClientsSDK\Requests\SalaryBalance;
+use googlogmob\YClientsSDK\Requests\SalarySummary;
 use Illuminate\Support\Facades\Facade;
 use googlogmob\YClientsSDK\Requests\Authorization;
 use googlogmob\YClientsSDK\Requests\Clients;
@@ -55,8 +55,8 @@ use googlogmob\YClientsSDK\Requests\ZReport;
  * @method static Abonements abonements
  * @method static AbonementsTransactions abonementsTransactions
  * @method static Programs programs
- * @method static SalaryPeriod salaryPeriod
- * @method static SalaryCalculation salaryCalculation
+ * @method static SalarySummary salaryPeriod
+ * @method static SalaryBalance salaryCalculation
  */
 class YClientsSDK extends Facade
 {

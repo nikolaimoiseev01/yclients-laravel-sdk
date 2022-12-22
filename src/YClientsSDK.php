@@ -14,8 +14,8 @@ use googlogmob\YClientsSDK\Requests\GoodsTransactions\TransactionsSearch;
 use googlogmob\YClientsSDK\Requests\Groups;
 use googlogmob\YClientsSDK\Requests\Programs;
 use googlogmob\YClientsSDK\Requests\Records;
-use googlogmob\YClientsSDK\Requests\SalaryCalculation;
-use googlogmob\YClientsSDK\Requests\SalaryPeriod;
+use googlogmob\YClientsSDK\Requests\SalaryBalance;
+use googlogmob\YClientsSDK\Requests\SalarySummary;
 use googlogmob\YClientsSDK\Requests\Schedules;
 use googlogmob\YClientsSDK\Requests\Seances;
 use googlogmob\YClientsSDK\Requests\ServiceCategory;
@@ -214,13 +214,13 @@ class YClientsSDK extends AbstractYClientsSDK
         return new Programs();
     }
 
-    public function salaryCalculation(): SalaryCalculation
+    public function salaryBalance(): SalaryBalance
     {
-        return new SalaryCalculation();
+        return new SalaryBalance();
     }
 
-    public function salaryPeriod(): SalaryPeriod
+    public function salarySummary(): SalarySummary
     {
-        return new SalaryPeriod();
+        return new SalarySummary();
     }
 }
