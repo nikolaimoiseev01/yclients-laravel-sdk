@@ -13,6 +13,6 @@ class SalaryBalance extends Request
 
     protected function request()
     {
-        return $this->requestApi("/company/{$this->company_id}/salary/calculation/staff/{$this->staffId}");
+        return $this->requestApi("company/{$this->company_id}/salary/calculation/staff/{$this->staffId}");
     }
 }

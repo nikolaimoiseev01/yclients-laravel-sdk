@@ -12,6 +12,6 @@ class SalarySummary extends Request
 
     protected function request()
     {
-        return $this->requestApi("/company/{$this->company_id}/salary/period/staff/{$this->staffId}");
+        return $this->requestApi("company/{$this->company_id}/salary/period/staff/{$this->staffId}");
     }
 }
