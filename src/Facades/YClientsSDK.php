@@ -55,8 +55,8 @@ use googlogmob\YClientsSDK\Requests\ZReport;
  * @method static Abonements abonements
  * @method static AbonementsTransactions abonementsTransactions
  * @method static Programs programs
- * @method static SalarySummary salaryPeriod
- * @method static SalaryBalance salaryCalculation
+ * @method static SalarySummary salarySummary
+ * @method static SalaryBalance salaryBalance
  */
 class YClientsSDK extends Facade
 {
