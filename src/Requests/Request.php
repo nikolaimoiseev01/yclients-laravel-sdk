@@ -81,6 +81,7 @@ abstract class Request
         return new Client([
             'base_uri' => $this->useAltegio ? $this->altegioHost : $this->host,
             'timeout'  => config('yclients-laravel-sdk.request.timeout'),
+            'verify' => false,
             'headers'  => [
                 'Authorization' => $authorization,
             ],
